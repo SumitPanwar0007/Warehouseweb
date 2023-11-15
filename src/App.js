@@ -15,7 +15,7 @@ import Pricing from './components/Pricing';
 import Register from './components/Register';
 function App() {
   return (
-    <Box width="400px" sx={{width:{xl:'1488px'}} }>
+    <Box height="100%" width='100vw' >
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}/>
@@ -29,8 +29,10 @@ function App() {
         <Route path="/whr" element={<Whr />} />
         <Route path="/ibw" element={<IdealBodyW />} />
       </Routes>
-    
+    <Box   >
+
       <Footer />
+    </Box>
     </Box>
   );
 }

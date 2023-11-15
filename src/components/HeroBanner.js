@@ -1,65 +1,4 @@
-// import React from 'react'
-// import {Box,Stack,Typography,Button} from '@mui/material'
 
-// import HeroImg from '../assets/images/banner.svg'
-// const HeroBanner = () => {
-
-//   return (
-//     <Box sx={{
-//         mt:{md:'170px',xs:'70px'},
-//         ml:{sm:'50px'}
-//     }} position="relative" p="20px" color="white">
-
-// <Typography
-// fontWeight="600" fontsize='30px'
-//   >
-//     Fitness Club  
-// </Typography>
-// <Typography
-// sx={{fontSize:{md:'75px', xs:'40px'}}}
-//  className="font-bold my-20 text-white text-5xl">
-//     <span className="text-orange-500 font-bold"> Transform  </span>
-//     <br />
-// Your Body
-// </Typography>
-
-// <Typography
-//     fontSize="22px"
-//     lineHeight="35px"  mb={4}
-//     className="text-orange-500/[0.5] font-bold"
-// >
-//    Check out the Effective Execises
-// </Typography>
- 
-//  <Button variant='contained' color='error' href='#exercises'
-//     sx={{backgroundColor:"#F97316", padding:'10px'}} 
-//  >
-//     Explore Exercises
-//  </Button>
-
-//  <Typography 
-//         fontWeight={600}
-//         color="#ff2625"
-//         sx={{
-           
-//             display:{sm:'block',xs:'none'}
-//         }}
-//         fontSize="200px"
-//         >
-//            Fitness
-//  </Typography>
-
-//  <Box sx={{ display: { sm: 'block', xs: 'inline' } }}>
-//         <img
-//           src={HeroImg}
-//           sx={{ opacity: 0.5 }}
-//           alt="banner"
-//           className="hero-banner-img"
-//         />
-//       </Box>
-//     </Box>
-//   )
-// }
 
 // export default HeroBanner
 import React from 'react';
@@ -87,15 +26,15 @@ const HeroBanner = () => {
           Fitness Club
         </Typography>
         <Typography
-          sx={{ fontSize: { md: '75px', xs: '40px' } }}
-          className="font-bold my-20 text-white text-5xl"
+          sx={{ fontSize: { md: '70px',sm:'60px', xs: '40px' } }}
+          className="font-bold my-10 text-white"
         >
-          <span className="text-orange-500 font-bold"> Transform </span>
+          <span className="text-orange-500 font-bold "> Transform </span>
           <br />
           Your Body
         </Typography>
         <Typography
-          fontSize="22px"
+          sx={{ fontSize: { md: '35px',sm:'25px', xs: '20px' } }}
           lineHeight="35px"
           mb={4}
           className="text-orange-500/[0.5] font-bold"
@@ -125,16 +64,25 @@ const HeroBanner = () => {
           top: '50%',
           left: '50%',
           // transform: 'translate(10%, 20%)',
+          fontSize: { md: '250px',sm:'200px' }
         }}
-        fontSize="200px"
+        // fontSize="200px"
       >
         Fitness
       </Typography>
       </Box>
-      <Box sx={{ display: { sm: 'block', xs: 'none' } }}>
+      <Box sx={{ display: { sm: 'block', xs: 'none' } ,
+     position: 'absolute',
+     top:'-35px',
+     left: '15rem',
+     width: '100%',
+     height: '100%',
+     zIndex: -1,}}>
         <img
           src={HeroImg}
-          sx={{ opacity: 0.5 }}
+          sx={{ opacity: 0.5,
+           
+           }}
           alt="banner"
           className="hero-banner-img"
         />
@@ -145,8 +93,9 @@ const HeroBanner = () => {
         sx={{
           display: { sm: 'none', xs: 'block' },
           position: 'absolute',
-          top: 0,
+          top: '-80px',
           left: 0,
+          
           width: '100%',
           height: '100%',
           zIndex: -1,
@@ -160,22 +109,7 @@ const HeroBanner = () => {
         />
       </Box>
 
-      {/* Fitness Text */}
-      {/* <Typography
-        fontWeight={600}
-        color="#ff2625"
-        sx={{
-          display: { sm: 'block', xs: 'none' },
-          zIndex: 1,
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-        }}
-        fontSize="200px"
-      >
-        Fitness
-      </Typography> */}
+     
     </Stack>
   );
 };

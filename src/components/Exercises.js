@@ -44,10 +44,11 @@ const Exercises = ({exercises,setExercises,bodyPart}) => {
     sx={{mt:{lg:'110px'}}}
     mt="50px" p="20px"
     >
-      <Typography variant='h4' className="text-orange-500/[0.8] py-8">
+      <Typography variant='h4' className="text-orange-500/[0.8] py-8"
+       sx={{ fontSize: { md: '55px',sm:'45px', xs: '30px' } }}>
         Showing Results
       </Typography>
-      <Stack direction='row' sx={{gap:{lg:'110px',xs:'50px'}}}
+      <Stack direction='row' sx={{gap:{lg:'120px',xs:'50px'}}}
         flexWrap='wrap' justifyContent='center' >
         
          {currentExercises.map((exercise, index)=>(

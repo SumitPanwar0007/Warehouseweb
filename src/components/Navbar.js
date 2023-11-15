@@ -23,6 +23,10 @@ const Navbar = () => {
     
     setMobileMenuOpen(false);
   };
+  const handleComponentChangeMobile=(value)=>{
+    navigate(`/${value}`)
+    setMobileMenuOpen(false);
+  }
 
   return (
     <AppBar position="static"  style={{backgroundColor:'inherit'}}>
@@ -38,7 +42,7 @@ const Navbar = () => {
           sx={{ display: { sm: 'flex', xs: 'none' } }}
         >
 
-          
+
         {/* Links hidden on mobile */}
 
       
@@ -48,7 +52,8 @@ const Navbar = () => {
         <Link to="/pricing"  className="py-4 text-white" >Pricing</Link>
 
 
-      <ul style={{paddingTop:0}}>        <li>
+      <ul style={{paddingTop:0}}>       
+       <li>
             <select onChange={handleComponentChange}
             style={{
               backgroundColor: '#090909', 
@@ -99,12 +104,13 @@ const Navbar = () => {
             sx={{ display: { sm: 'none' } }}
          
           >
-            <MenuIcon />
+           { isMobileMenuOpen ?<CloseIcon />  :<MenuIcon />} 
           </IconButton>
 
-          {/* Mobile Menu */}
+          {/* Mobile Menu ------*/}
 
           {isMobileMenuOpen && (
+
             <div
               style={{
                 position: 'absolute',
@@ -122,31 +128,24 @@ const Navbar = () => {
               }}
             >
 
-              {/* Close Button */}
-              {/* <IconButton
-                edge="end"
-                color="inherit"
-                aria-label="close"
-                onClick={handleMobileMenuToggle}
-                sx={{ position: 'absolute', top: '10px', right: '10px' }}
-              >
-                <CloseIcon />
-              </IconButton> */}
+              
 
 
 
               {/* Menu Items on mobile screen*/}
-              <Link to="/"  className="py-4 border-b-2 border-blue-700 text-white" >Home</Link>
-                <a href="#exercises" style={{textDecoration:'none'}} className="py-4 text-white">Exercise</a>
-              <a href="#exercises" style={{textDecoration:'none'}} className="py-4 text-white">Pricing</a>
-              {/* <MenuItem onClick={() => handleComponentChange('')}>Claculate Fitness </MenuItem> */}
-              <MenuItem onClick={() => handleComponentChange('bmi')}>BMI Calculator</MenuItem>
-              <MenuItem onClick={() => handleComponentChange('bfp')}>  Body Fat Percentage</MenuItem>
-              <MenuItem onClick={() => handleComponentChange('whr')}>Waist-Hip Ratio</MenuItem>
-              <MenuItem onClick={() => handleComponentChange('ibw')}>Ideal Body Weight</MenuItem>
+              <MenuItem  className="py-4 border-b-2 border-blue-700 text-white"   onClick={() => handleComponentChangeMobile('')} >Home</MenuItem>
+               
+              <MenuItem className="py-4 text-white"  onClick={() => handleComponentChangeMobile('pricing')} >Pricing</MenuItem>
+
+              <MenuItem onClick={() => handleComponentChangeMobile('bmi')}>BMI Calculator</MenuItem>
+              <MenuItem onClick={() => handleComponentChangeMobile('bfp')}>  Body Fat Percentage</MenuItem>
+              <MenuItem onClick={() => handleComponentChangeMobile('whr')}>Waist-Hip Ratio</MenuItem>
+              <MenuItem onClick={() => handleComponentChangeMobile('ibw')}>Ideal Body Weight</MenuItem>
 
               <div>
+
               {/* Register Button on mobile */}
+
           <Button
             sx={{
               backgroundColor: 'inherit',
@@ -157,8 +156,10 @@ const Navbar = () => {
                 backgroundColor: '#F97316',
               },
             }}
+            onClick={() => handleComponentChangeMobile('register')}
           >
-            Register
+             
+             Register
           </Button>
         </div>
             </div>

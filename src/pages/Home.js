@@ -20,11 +20,18 @@ const [exercises,setExercises]=useState([])
         <Box sx={{display:'flex',flexDirection:{sm:'row',xs:'column'},paddingTop:'40px',paddingBottom:'40px',textAlign:{xs:'start'},gap:'20px'}}>
         
        
-        <Typography  style={{color:'white',padding:'15px',textJustify:"end"}}>
-        <p>Let's make Healthy happen!!</p>
-        <Typography variant='h3' style={{color:'#F97316',padding:'10px'}}> FITNESS FOR ALL </Typography>
+        <Typography    sx={{ fontSize: { md: '20px',sm:'15px', xs: '10px' } }}
+          style={{color:'white',padding:'15px',textJustify:"end"}}>
+
+        <p className='text-base sm:text-xl md:text-2xl'>Let's make Healthy happen!!</p>
+
+        <Typography variant='h3'  sx={{ fontSize: { md: '50px',sm:'40px', xs: '30px' } }} style={{color:'#F97316',padding:'10px'}}>
+           FITNESS FOR ALL 
+           </Typography>
+
    Fitness is not the prerogative of a few AF gyms in India. It is the right of each individual on the same premise and 
-   we are committed to 'Make Healthy Happen' for all. <br />  
+   <br /> we are committed to 'Make Healthy Happen' for all. <br />  
+
       </Typography>
        <Box sx={{width:{sm:'70%',xs:'90%'}, paddingLeft:{xs:'20px'}}} >
        
@@ -45,9 +52,14 @@ const [exercises,setExercises]=useState([])
       
         </Box>
         
-      <Typography  style={{color:'white',fontSize:{sm:'45',xs:'25'},textAlignLast:'start'}}>
-        <p>See what Anytime Fitness is all about!</p>
-        <Typography variant='h3' style={{color:'#F97316',padding:'10px'}}>GYM'S Virtual Toour at a Glance </Typography>
+      <Typography  
+         sx={{ fontSize: { md: '20px',sm:'15px', xs: '10px' } }}
+       style={{color:'white',fontSize:{sm:'45',xs:'25'},textAlignLast:'start',padding:'10px'}}>
+        <p className='text-base sm:text-xl md:text-2xl'>See what Anytime Fitness is all about!</p>
+        <Typography variant='h3' sx={{ fontSize: { md: '50px',sm:'40px', xs: '30px' } }} style={{color:'#F97316',padding:'10px'}}>
+          GYM'S Virtual Toour at a Glance 
+
+          </Typography>
    Join us on a Virtual Tour around Anytime Fitness. You can take safe,personal virtual tour of our Club from the comfort of your home.br <br />
    Our facilities are equipped with sate-of-the-art fitness infrastructure making AF the top gym in India to be a part of. <br />
       </Typography>

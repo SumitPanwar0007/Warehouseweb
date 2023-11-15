@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import {Button,Stack,Typography} from '@mui/material';
 const ExerciseCard = ({exercise}) => {
   return (
-      <Link className="exercise-card bg-[#475569]  w-4"  to={`/exercise/${exercise.id}`} >
+      <Link className="exercise-card bg-[#475569]  w-auto"  to={`/exercise/${exercise.id}`} >
       
       <img src={exercise.gifUrl} alt={exercise.name} loading='lazy' className="opacity-75 " />
      
