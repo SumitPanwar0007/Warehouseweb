@@ -5,7 +5,7 @@ export  const exerciseOptions = {
 //   url: ,
   headers: {
     'X-RapidAPI-Key':process.env.REACT_APP_WORKOUT_KEY ,
-    'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+    'x-rapidapi-Host': 'exercisedb.p.rapidapi.com'
   }
 };
 
@@ -21,7 +21,8 @@ export const youtubeoptions = {
 
 export const fitnessCheck = {
   method: 'GET',
-  // url: 'https://mega-fitness-calculator1.p.rapidapi.com/bmi',
+  url: 'https://mega-fitness-calculator1.p.rapidapi.com/bmi',
+  path: '/bmi?weight=65&height=167',
  headers : {
     'X-RapidAPI-Host': 'mega-fitness-calculator1.p.rapidapi.com',
     'X-RapidAPI-Key': process.env.REACT_APP_WORKOUT_KEY,
@@ -33,12 +34,15 @@ export const fitnessCheck = {
 export const fetchData= async  (url,options)=>{
    try{   
     const response = await fetch(url,options);
+    if(!response.ok){
+      throw new Error(`HTTP error! status : ${response.status}`)
+    }
     const data= await response.json();
    
     return data;
   } 
   catch(error){
-    console.log(error)
-    console.log(" error in fetching api key bhiya")
+    console.error("Error fetching data:", error);
+    throw error;
   }
 }

@@ -1,6 +1,6 @@
 import { Box,Button,Stack,Typography } from '@mui/material'
 import React from 'react'
-import Logo from '../assets/images/logo.svg'
+
 const Footer = () => {
   return (
     <Box  

@@ -11,9 +11,16 @@ const BmiCalculator = () => {
 
 
   const calculateBmi=async()=>{
+    
     const BmiUrl='https://mega-fitness-calculator1.p.rapidapi.com/bmi';
-    const BmiNewData= await fetchData(`${BmiUrl}?weight=${weight}&height=${height}`,fitnessCheck);
-    setBmiData(BmiNewData)
+    try {
+      const BmiNewData = await fetchData(`${BmiUrl}?weight=${weight}&height=${height}`, fitnessCheck);
+      setBmiData(BmiNewData);
+    } catch (error) {
+      console.error("Error fetching BMI data:", error);
+      setBmiData(null);
+    }
+   
   }
 
 

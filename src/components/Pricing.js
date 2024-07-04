@@ -3,7 +3,7 @@ import Box from "@mui/joy/Box";
 import Button from "@mui/joy/Button";
 import Card from "@mui/joy/Card";
 import CardActions from "@mui/joy/CardActions";
-import Chip from "@mui/joy/Chip";
+
 import Typography from "@mui/joy/Typography";
 import { List, ListItem, ListItemText } from "@mui/material";
 import { CardOverflow } from "@mui/joy";
